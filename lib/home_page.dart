@@ -1,6 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:instagram_ui/pages/account_page.dart';
+import 'package:instagram_ui/pages/like_page.dart';
+import 'package:instagram_ui/pages/reels_page.dart';
+import 'package:instagram_ui/pages/search_page.dart';
+import 'package:instagram_ui/pages/user_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -10,7 +15,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  var selectedIndex = 3;
+  var selectedIndex = 0;
   void navigateBottomNavBar(int index) {
     setState(() {
       selectedIndex = index;
@@ -18,21 +23,11 @@ class _HomePageState extends State<HomePage> {
   }
 
   final List<Widget> children = [
-    Center(
-      child: Text('home'),
-    ),
-    Center(
-      child: Text('search'),
-    ),
-    Center(
-      child: Text('reels'),
-    ),
-    Center(
-      child: Text('like'),
-    ),
-    Center(
-      child: Text('account'),
-    ),
+    UserPage(),
+    UserSearch(),
+    UserReels(),
+    UserLike(),
+    UserAccount(),
   ];
 
   @override

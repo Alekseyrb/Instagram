@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:instagram_ui/homepage.dart';
+import 'package:instagram_ui/home_page.dart';
 
 void main() => runApp(MyApp());
 
