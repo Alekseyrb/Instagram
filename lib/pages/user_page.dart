@@ -7,7 +7,16 @@ import 'package:instagram_ui/util/bubble_stories.dart';
 import 'package:instagram_ui/util/user_posts.dart';
 
 class UserPage extends StatelessWidget {
-  const UserPage({Key? key}) : super(key: key);
+  UserPage({Key? key}) : super(key: key);
+
+  final List<String> people = [
+    'Alex',
+    'Obama',
+    'Vasya',
+    'Aleksey',
+    'Vova',
+    'Andrey',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -37,8 +46,8 @@ class UserPage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          StorisWidget(),
-          PostsWidget(),
+          StorisWidget(people: people),
+          PostsWidget(people: people),
         ],
       ),
     );
@@ -46,16 +55,8 @@ class UserPage extends StatelessWidget {
 }
 
 class StorisWidget extends StatelessWidget {
-  StorisWidget({Key? key}) : super(key: key);
-
-  final List<String> people = [
-    'Alex',
-    'Obama',
-    'Vasya',
-    'Aleksey',
-    'Vova',
-    'Andrey',
-  ];
+  final List<String> people;
+  StorisWidget({Key? key, required this.people}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -73,15 +74,8 @@ class StorisWidget extends StatelessWidget {
 }
 
 class PostsWidget extends StatelessWidget {
-  PostsWidget({Key? key}) : super(key: key);
-  final List<String> people = [
-    'Alex',
-    'Obama',
-    'Vasya',
-    'Aleksey',
-    'Vova',
-    'Andrey',
-  ];
+  final List<String> people;
+  PostsWidget({Key? key, required this.people}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

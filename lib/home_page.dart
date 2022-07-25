@@ -15,7 +15,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  var selectedIndex = 1;
+  var selectedIndex = 4;
   void navigateBottomNavBar(int index) {
     setState(() {
       selectedIndex = index;
